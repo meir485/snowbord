@@ -1,0 +1,36 @@
+img{
+	border-bottom: 2px solid black; 
+    height:150px ;
+	width: 100%;
+}
+
+img:hover {
+	height:280px ;
+	width: 100%;	
+
+		}
+
+
+#maintitle {
+	text-align: center;
+}
+
+a{
+	margin-right:45%; 
+	margin-left:45%;
+}
+.imgHolder{
+	display: inline-block;
+	border: 5px solid red; 
+    height:280px ;
+	
+}
+.imgReel{
+	display: grid;
+  grid-template-columns: auto auto auto auto auto;
+
+
+	padding: 0px
+	margin-right:15%; 
+	margin-left:15%;
+}

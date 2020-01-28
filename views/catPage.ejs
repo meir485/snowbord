@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>catagory page</title>
+        <link rel="stylesheet" href="/stylesheet/styles.css">
+    </head>
+    <body>
+        <p>This is an example of <%=types%> catagory page.</p>
+
+        <div class="imgReel">
+<% prodact.forEach(function(pro){ %>
+<h4><%= pro%></h4>
+<% if(pro.type.toString()===types.toString()){ %>
+     <span class="imgHolder">
+    	<img src="<%=pro.image%>"> 
+    	  <div>
+    		<h4><%= pro.name %></h4>
+    		<p>
+                <a href="/campgrounds/<%= pro._id%>">more info</a>
+    		</p>
+    	  </div>
+     </span>
+
+<% } %>
+
+<% }) %>
+</div>
+        
+
+
+    
+    </body>
+</html>
