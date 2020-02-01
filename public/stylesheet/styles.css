@@ -16,8 +16,9 @@ img:hover {
 }
 
 a{
-	margin-right:45%; 
-	margin-left:45%;
+	   
+	    display: inline-block;
+ vertical-align: middle;
 }
 .imgHolder{
 	display: inline-block;
@@ -25,12 +26,22 @@ a{
     height:280px ;
 	
 }
+#imgin{
+	border-bottom: 2px solid black; 
+	
+    height:70%;
+	width: 100%;
+}
+
+#imgin:hover {
+	margin: 0;
+	height:100% ;
+	width: 100%;	
+
+		}
 .imgReel{
+    background-color: white;
+    margin: 0 17% 0;
 	display: grid;
-  grid-template-columns: auto auto auto auto auto;
-
-
-	padding: 0px
-	margin-right:15%; 
-	margin-left:15%;
+  grid-template-columns: auto auto auto auto auto; 
 }

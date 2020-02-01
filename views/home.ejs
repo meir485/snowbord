@@ -1,14 +1,5 @@
 <!--
-Q{ "_id" : ObjectId("5e2f2516e202d91ed8de80ce"), "comments" : [ ], "image" : "/images/mens/1.webp", "name" : "t0", "description" : "", "type" : "men", "__v" : 0 }
-{ "_id" : ObjectId("5e2f2516e202d91ed8de80cf"), "comments" : [ ], "image" : "/images/mens/2.webp", "name" : "t1", "description" : "", "type" : "men", "__v" : 0 }
-{ "_id" : ObjectId("5e2f2516e202d91ed8de80d0"), "comments" : [ ], "image" : "/images/mens/3.webp", "name" : "t2", "description" : "", "type" : "men", "__v" : 0 }
-{ "_id" : ObjectId("5e2f2516e202d91ed8de80d1"), "comments" : [ ], "image" : "/images/mens/4.webp", "name" : "t3", "description" : "", "type" : "men", "__v" : 0 }
-{ "_id" : ObjectId("5e2f2516e202d91ed8de80d2"), "comments" : [ ], "image" : "/images/mens/4.webp", "name" : "t4", "description" : "", "type" : "men", "__v" : 0 }
-{ "_id" : ObjectId("5e2f2516e202d91ed8de80d3"), "comments" : [ ], "image" : "/images/mens/5.webp", "name" : "t5", "description" : "", "type" : "men", "__v" : 0 }
-1.span or div
-2.make img squre by width
-3.centerrr
-4.file path
+
 -->
 
 <!DOCTYPE html>
@@ -29,59 +20,37 @@ Q{ "_id" : ObjectId("5e2f2516e202d91ed8de80ce"), "comments" : [ ], "image" : "/i
     </div>
 
     <div class="imgReel">
-    	<button onclick="imgLeft()"><<</button>
-        <span class="imgHolder">
-    	<img src=""  >
-    	  <div>
-    		<h4></h4>
-    		<p></p>
-    	  </div>
-        </span>
+    	<button onclick="plusSlides(3)"><<</button>
+        <% a.forEach(function(pro){ %>
+        <span class="menHolder">
+        <img id="imgin" src="<%=pro.image%>"> 
+          <div>
+            <h4><%= pro.name %></h4>
+            <p>
+                <a href="/campgrounds/<%= pro._id%>">more info</a>
+            </p>
+          </div>
+     </span>
 
-        <span class="imgHolder">
-    	<img src=""  >
-    	  <div>
-    		<h4></h4>
-    		<p></p>
-    	  </div>
-        </span>
-
-        <span class="imgHolder">
-    	<img src=""  >
-    	  <div>
-    		<h4></h4>
-    		<p></p>
-    	  </div>
-        </span>
-        <button onclick="imgRight()">>></button>
+        <% }) %>
+        <button onclick="plusSlides(-3)">>></button>
     </div>
     <a href="/catPage/mens">mens</a>
     
 
     <div class="imgReel">
-        <div class="imgHolder">
-    	<img src="https://www.burton.com/static/product/W20/10704106000145_1.png?impolicy=bglt&imwidth=486"  >
-    	  <div>
-    		<h4>the shreder</h4>
-    		<p>From the park to the groomers, Burton's deep selection of men's snowboards has options for every style of riding</p>
-    	  </div>
-        </div>
+        <% b.forEach(function(pro){ %>
+        <span class="imgHolder">
+        <img src="<%=pro.image%>"> 
+          <div>
+            <h4><%= pro.name %></h4>
+            <p>
+                <a href="/campgrounds/<%= pro._id%>">more info</a>
+            </p>
+          </div>
+        </span>
 
-        <div class="imgHolder">
-    	<img src="https://www.burton.com/static/product/W20/10704106000145_1.png?impolicy=bglt&imwidth=486"  >
-    	  <div>
-    		<h4>the shreder</h4>
-    		<p>From the park to the groomers, Burton's deep selection of men's snowboards has options for every style of riding</p>
-    	  </div>
-        </div>
-
-        <div class="imgHolder">
-    	<img src="https://www.burton.com/static/product/W20/10704106000145_1.png?impolicy=bglt&imwidth=486"  >
-    	  <div>
-    		<h4>the shreder</h4>
-    		<p>From the park to the groomers, Burton's deep selection of men's snowboards has options for every style of riding</p>
-    	  </div>
-        </div>
+        <% }) %>
     </div>
     <a href="/catPage/womens">womens</a>
     
@@ -113,7 +82,6 @@ Q{ "_id" : ObjectId("5e2f2516e202d91ed8de80ce"), "comments" : [ ], "image" : "/i
     <div class="atag">
     	<a href="/catPage/gear">gear</a>
     </div>
-
 
   <script src="/scripts/home.js"></script>
     </body>

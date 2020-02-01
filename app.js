@@ -15,17 +15,38 @@ app.use(express.static(__dirname + "/public"))
 seed();
 
 app.get("/home" , function(req , res){
-    res.render("home")            
+  prodact.find({type:"men"}).exec( function ( err, men ){
+     if( err ) return next( err );
+     else{
+      prodact.find({type:"women"}).exec(  function ( err, women ){
+        if( err ) return next( err );
+        else{
+          res.render("home" , {a:men , b:women })
+        }
+      })
+     }
+    })          
 })
 
 app.get("/catPage/:id" , function(req , res){
-     var t = req.params.id.toString();console.log("t "+t)
-    var pro = prodact.find({type:t});console.log("pro "+pro.object)
+     var t = String(req.params.id);console.log("t "+t)
+     switch (t){
+      case "mens":  
+          var pro = prodact.find({type:"men"});console.log("pro "+pro.object)
+          break
+      case "womens":  
+          var pro = prodact.find({type:"women"});console.log("pro "+pro.object)
+          break
+      case "gear":  
+          var pro = prodact.find({type:"gear"});console.log("pro "+pro.object)
+          break          
+     }
+    
     pro.exec(function(err,found){
 	if(err){console.log(err)}
 		else{ 
             console.log("found "+found)
-			res.render("catPage" , {prodact , type:t})  }
+			res.render("catPage" , {prodact:found , type:t})  }
     })
 
 
