@@ -1,7 +1,8 @@
 var mongoose = require("mongoose");
  
-var commentSchema = new mongoose.Schema({
+var reveiwSchema = new mongoose.Schema({
     text: String,
+    stars: Number,
     author: {
         id: {
          type: mongoose.Schema.Types.ObjectId,
@@ -11,4 +12,4 @@ var commentSchema = new mongoose.Schema({
     }
 });
  
-module.exports = mongoose.model("Comment", commentSchema);
+module.exports = mongoose.model("Rv", reveiwSchema);

@@ -1,0 +1,11 @@
+<%- include("../partials/header") %>
+
+<h1>edit your review</h1>
+
+<form action="/show/<%=snowid%>/reveiw/<%=rv._id%>?_method=PUT" method="POST">
+	<input type="text" placeholder="<%=rv.text%>" name="reveiw[text]">
+	<input type="number" placeholder="<%=rv.stars%>" name="reveiw[stars]">
+	<button>submit</button>
+</form>
+<a href="/show/<%=snowid%>/">back</a>
+<%- include("../partials/footer") %>

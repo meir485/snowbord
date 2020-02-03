@@ -1,0 +1,27 @@
+<%- include("./partials/header") %>
+   <a href="/show/<%=pro._id%>/edit"> <button>edit</button></a>
+   <form id="deleteForm" action="/show/<%=pro._id%>?_method=DELETE" method="POST">
+	            <button class="deleteButton">delete</button>
+   </form>	
+  
+  <img src="<%=pro.image%>"> 
+          <div>
+            <h4>the <%= pro.name %> by <%= pro.company %> </h4>
+            <h5>seller: <i><%= pro.author.username %></i></h5>
+            <p><%=pro.description%></p>
+            <% pro.colors.forEach(function(cl){ %>
+            <span id="color" style="background-color:<%=cl%>;">.</span>
+            <% }) %>
+            <% var s = String(pro.stars) %>
+            <p><%= s  %> star  <span><%=pro.price%></span></p>
+            <a href="/show/<%=pro._id%>/reveiw/new"><button>write review</button></a>
+            <% pro.reveiws.forEach(function(rv){ %>
+                <h4><b><%=rv.author.username%></b> - <i><%= rv.stars %> star</i></h4>
+                <p><%=rv.text%> </p>
+                <a href="/show/<%=pro._id%>/reveiw/<%=rv._id%>/edit"> <button>edit</button><a>
+                <form id="deleteForm" action="/show/<%=pro._id%>/reveiw/<%=rv._id%>?_method=DELETE" method="POST">
+	            <button class="deleteButton">delete</button>
+                </form>	
+            <% }) %>
+          </div>
+<%- include("./partials/footer") %>

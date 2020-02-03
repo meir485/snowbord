@@ -1,16 +1,28 @@
 var mongoose = require("mongoose")
-var comment   = require("./comment");
+var reveiw   = require("./reveiw")
+var user     = require("./user") 
  
 prodactSchema = new mongoose.Schema({
 	name: String,
+  company:String,
 	image: String,
 	description: String,
-  id:String,
+  stars:Number,
+  price: Number,
 	type: String,
-	comments: [
+  //type
+  colors:[],
+  author:  {
+        id: {
+         type: mongoose.Schema.Types.ObjectId,
+         ref: "User"
+        } ,
+        username: String
+    },
+	reveiws: [
       {
          type: mongoose.Schema.Types.ObjectId,
-         ref: "Comment"
+         ref: "Rv"
       }
       ]
 })

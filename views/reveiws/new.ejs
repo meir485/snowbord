@@ -1,0 +1,11 @@
+<%- include("../partials/header") %>
+
+<h1>create new review to <%= pro.name %> </h1>
+
+<form action="/show/<%=pro._id%>/reveiw" method="POST">
+	<input type="text" placeholder="text" name="reveiw[text]">
+	<input type="number" placeholder="stars" name="reveiw[stars]">
+	<button>submit</button>
+</form>
+<a href="/show/<%=pro._id%>">back</a>
+<%- include("../partials/footer") %>

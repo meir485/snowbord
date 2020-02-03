@@ -1,0 +1,16 @@
+<%- include("../partials/header") %>
+
+<h1>edit <%=pro.name%> </h1>
+
+<form action="/show/<%=pro._id%>?_method=PUT" method="POST">
+	<input type="text" placeholder="<%=pro.name%>" name="prod[name]">
+	<input type="text" placeholder="<%=pro.company%>" name="prod[company]">
+	<input type="text" placeholder="<%=pro.image%>" name="prod[image]">
+	<input type="text" placeholder="<%=pro.description%>" name="prod[description]">
+	<input type="text" value="[]" name="prod[colors]">
+	<input type="text" placeholder="<%=pro.catagory%>" name="prod[type]">
+	<input type="number" placeholder="<%=pro.price%>" name="prod[price]">
+	<button>submit</button>
+</form> 
+<a href="/home">back</a>
+<%- include("../partials/footer") %>

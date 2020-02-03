@@ -1,88 +1,83 @@
-<!--
-
--->
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>snow bords shit</title>
-        <link rel="stylesheet" href="/stylesheet/styles.css">
-    </head>
-    <body>
-
-
-    
-
-   	<div id="maintitle">
-   	    <h1>snow bord shop</h1>
-    	<p>burtons amyzing blablaFor 20 years, [ak] has been the final word in technical and high-performance backcountry snowboarding gear. It's our team rider’s first choice for heading into the backcountry, undertaking a big line or objective, charging hard on epic powder days, optimizing storm days, and, thanks to the total versatility of the [ak] line, it’s also their everyday resort riding kit. Why wouldn’t you choose the best? In the words of Burton team rider Danny Davis, “[ak] makes tough conditions easier.”
+<%- include("./partials/header") %>
+<div id="maintitle">
+        <h1>snow bord shop</h1>
+        <p>burtons amyzing blablaFor 20 years, [ak] has been the final word in technical and high-performance backcountry snowboarding gear. It's our team rider’s first choice for heading into the backcountry, undertaking a big line or objective, charging hard on epic powder days, optimizing storm days, and, thanks to the total versatility of the [ak] line, it’s also their everyday resort riding kit. Why wouldn’t you choose the best? In the words of Burton team rider Danny Davis, “[ak] makes tough conditions easier.”
         </p>
     </div>
 
+     <a href="/home/new"><button>add new snow bord shit</button></a>
+
     <div class="imgReel">
-    	<button onclick="plusSlides(3)"><<</button>
+        <button onclick="plusSlides(3,0)"><<</button>
         <% a.forEach(function(pro){ %>
-        <span class="menHolder">
+        <span class="men">
         <img id="imgin" src="<%=pro.image%>"> 
           <div>
             <h4><%= pro.name %></h4>
             <p>
-                <a href="/campgrounds/<%= pro._id%>">more info</a>
+                <a href="/show/<%= pro._id%>">more info</a>
             </p>
           </div>
      </span>
 
         <% }) %>
-        <button onclick="plusSlides(-3)">>></button>
+        <button onclick="plusSlides(-3,0)">>></button>
     </div>
     <a href="/catPage/mens">mens</a>
     
-
     <div class="imgReel">
+        <button onclick="plusSlides(3,1)"><<</button>
         <% b.forEach(function(pro){ %>
-        <span class="imgHolder">
-        <img src="<%=pro.image%>"> 
+        <span class="women">
+        <img id="imgin" src="<%=pro.image%>"> 
           <div>
             <h4><%= pro.name %></h4>
             <p>
-                <a href="/campgrounds/<%= pro._id%>">more info</a>
+                <a href="/show/<%= pro._id%>">more info</a>
             </p>
           </div>
-        </span>
+     </span>
 
         <% }) %>
+        <button onclick="plusSlides(-3,1)">>></button>
     </div>
     <a href="/catPage/womens">womens</a>
-    
+
+
+   
+        
     <div class="imgReel">
         <div class="imgHolder">
-    	<img src="https://www.burton.com/static/product/W20/10704106000145_1.png?impolicy=bglt&imwidth=486"  >
-    	  <div>
-    		<h4>the shreder</h4>
-    		<p>From the park to the groomers, Burton's deep selection of men's snowboards has options for every style of riding</p>
-    	  </div>
+        <img src="https://www.burton.com/static/product/W20/10704106000145_1.png?impolicy=bglt&imwidth=486"  >
+          <div>
+            <h4>the shreder</h4>
+            <p>From the park to the groomers, Burton's deep selection of men's snowboards has options for every style of riding</p>
+          </div>
         </div>
 
         <div class="imgHolder">
-    	<img src="https://www.burton.com/static/product/W20/10704106000145_1.png?impolicy=bglt&imwidth=486"  >
-    	  <div>
-    		<h4>the shreder</h4>
-    		<p>From the park to the groomers, Burton's deep selection of men's snowboards has options for every style of riding</p>
-    	  </div>
+        <img src="https://www.burton.com/static/product/W20/10704106000145_1.png?impolicy=bglt&imwidth=486"  >
+          <div>
+            <h4>the shreder</h4>
+            <p>From the park to the groomers, Burton's deep selection of men's snowboards has options for every style of riding</p>
+          </div>
         </div>
 
         <div class="imgHolder">
-    	<img src="https://www.burton.com/static/product/W20/10704106000145_1.png?impolicy=bglt&imwidth=486"  >
-    	  <div>
-    		<h4>the shreder</h4>
-    		<p>From the park to the groomers, Burton's deep selection of men's snowboards has options for every style of riding</p>
-    	  </div>
+        <img src="https://www.burton.com/static/product/W20/10704106000145_1.png?impolicy=bglt&imwidth=486"  >
+          <div>
+            <h4>the shreder</h4>
+            <p>From the park to the groomers, Burton's deep selection of men's snowboards has options for every style of riding</p>
+          </div>
         </div>
     </div>
     <div class="atag">
-    	<a href="/catPage/gear">gear</a>
+        <a href="/catPage/gear">gear</a>
     </div>
+<%- include("./partials/footer") %>
 
-  <script src="/scripts/home.js"></script>
-    </body>
-</html>
+    
+
+   	
+
+ 

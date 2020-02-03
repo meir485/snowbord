@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>snow bords</title>
+         
+         
+         <link rel="stylesheet" href="/stylesheet/styles.css">
+    </head>
+    <body>
+    <ul>
+             <li><a href="/home">home</a></li>
+<% if(!currentUser){ %>
+             <li  id="right"><a href="/login">login</a></li>
+    	     <li  id="right"><a href="/signup">sign up</a></li>
+     <% } else { %>
+            <li id="right"><p> signed as <%=currentUser.username%></p></li>
+    	    <li id='right'><a href="/logout">logout</a></li>
+    	<% } %>
+    </ul> 
+
+    <div class="opening">
+        <h1>snwowoooowing snoww</h1>
+    </div> 
+    

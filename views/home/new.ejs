@@ -1,0 +1,16 @@
+<%- include("../partials/header") %>
+
+<h1>create new snow bord shit </h1>
+
+<form action="/home/new" method="POST">
+	<input type="text" placeholder="name" name="pro[name]">
+	<input type="text" placeholder="company" name="pro[company]">
+	<input type="text" placeholder="image" name="pro[image]">
+	<input type="text" placeholder="description" name="pro[description]">
+	<input type="text" value="[]" name="pro[colors]">
+	<input type="text" placeholder="catagory" name="pro[type]">
+	<input type="number" placeholder="price" name="pro[price]">
+	<button>submit</button>
+</form> 
+<a href="/home">back</a>
+<%- include("../partials/footer") %>
