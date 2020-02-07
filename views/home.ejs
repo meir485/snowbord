@@ -3,50 +3,89 @@
         <h1>snow bord shop</h1>
         <p>burtons amyzing blablaFor 20 years, [ak] has been the final word in technical and high-performance backcountry snowboarding gear. It's our team rider’s first choice for heading into the backcountry, undertaking a big line or objective, charging hard on epic powder days, optimizing storm days, and, thanks to the total versatility of the [ak] line, it’s also their everyday resort riding kit. Why wouldn’t you choose the best? In the words of Burton team rider Danny Davis, “[ak] makes tough conditions easier.”
         </p>
-    </div>
+</div>
 
-     <a href="/home/new"><button>add new snow bord shit</button></a>
-
-    <div class="imgReel">
-        <button onclick="plusSlides(3,0)"><<</button>
-        <% a.forEach(function(pro){ %>
-        <span class="men">
-        <img id="imgin" src="<%=pro.image%>"> 
-          <div>
-            <h4><%= pro.name %></h4>
-            <p>
-                <a href="/show/<%= pro._id%>">more info</a>
-            </p>
-          </div>
-     </span>
-
-        <% }) %>
-        <button onclick="plusSlides(-3,0)">>></button>
-    </div>
-    <a href="/catPage/mens">mens</a>
     
-    <div class="imgReel">
-        <button onclick="plusSlides(3,1)"><<</button>
-        <% b.forEach(function(pro){ %>
-        <span class="women">
-        <img id="imgin" src="<%=pro.image%>"> 
-          <div>
-            <h4><%= pro.name %></h4>
-            <p>
-                <a href="/show/<%= pro._id%>">more info</a>
-            </p>
-          </div>
-     </span>
+
+
+<table class="container">
+   <a href="/home/new"><button>add new snow bord shit</button></a>
+  <tr>
+    <td>
+          <button onclick="plusSlides(3,0)"><<</button>
+    </td>
+    <td>
+      <div class="imgReel" id="homeP">    
+        <% a.forEach(function(pro){ %>
+       <span class="men">
+        <div class="imgHolder" >
+                  <img id="imgin" src="<%=pro.image%>"> 
+                     <div>
+                       <h4><%= pro.name %></h4>
+                               <p>
+                                   <a href="/show/<%= pro._id%>">more info</a>
+                               </p>
+                      </div>
+        </div>
+        
+      </span>
 
         <% }) %>
-        <button onclick="plusSlides(-3,1)">>></button>
+       
+      
     </div>
-    <a href="/catPage/womens">womens</a>
+    </td>
+    <td>
+       <button onclick="plusSlides(-3,0)">>></button>
+    </td>
+      </tr>
+     <tr><td><a href="/catPage/mens">mens</a></td></tr>
+    
+     <tr>
+      <td>
+            <button onclick="plusSlides(3,1)"><<</button>
+      </td>
+      <td>
+        <div class="imgReel" id="homeP">    
+          <% b.forEach(function(pro){ %>
+         <span class="women">
+          <div class="imgHolder" >
+                    <img id="imgin" src="<%=pro.image%>"> 
+                       <div>
+                         <h4><%= pro.name %></h4>
+                                 <p>
+                                     <a href="/show/<%= pro._id%>">more info</a>
+                                 </p>
+                        </div>
+          </div>
+          
+        </span>
+  
+          <% }) %>
+         
+        
+      </div>
+      </td>
+      <td>
+         <button onclick="plusSlides(-3,1)">>></button>
+      </td>
+        </tr>
+       <tr><td><a href="/catPage/womens">womens</a></td></tr>
+      
+      
+    
+    
+  
+</table>
 
+ 
+
+
+    
 
    
         
-    <div class="imgReel">
+    <div class="imgReel" id="homeP">
         <div class="imgHolder">
         <img src="https://www.burton.com/static/product/W20/10704106000145_1.png?impolicy=bglt&imwidth=486"  >
           <div>

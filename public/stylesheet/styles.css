@@ -1,9 +1,15 @@
-img{
+body{
+	background: url("https://besthqwallpapers.com/Uploads/30-10-2019/109821/thumb2-snow-texture-4k-macro-winter-backgrounds-blue-snow-background.jpg") repeat;
+ }
+
+/* img{
 	border-bottom: 2px solid black; 
     height:150px ;
 	width: 100%;
+} */
+button{
+	display: inline-block;
 }
-
 img:hover {
 	height:280px ;
 	width: 100%;	
@@ -21,14 +27,14 @@ a{
  vertical-align: middle;
 }
 .imgHolder{
-	display: inline-block;
-	border: 5px solid red; 
-    height:280px ;
+	width: 96%;
+	border: 2px solid black; 
+    margin: 0 2%;
 	
 }
+
 #imgin{
 	border-bottom: 2px solid black; 
-	
     height:70%;
 	width: 100%;
 }
@@ -39,13 +45,20 @@ a{
 	width: 100%;	
 
 		}
-.imgReel{
+.imgReel#homeP{
     background-color: white;
-    margin: 0 17% 0;
+ 
 	display: grid;
-  grid-template-columns: auto auto auto auto auto; 
+  grid-template-columns: auto auto auto ; 
 }
 
 #color{
 	padding: 0.5em;
+}
+.container{
+	margin: 0 17%  ;
+	text-align: center;
+}
+tr{
+	height: 10%;
 }

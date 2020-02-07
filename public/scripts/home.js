@@ -15,6 +15,7 @@ function showSlides(n,type) {
  
   var i;
   var slides = document.getElementsByClassName(slideId[type]);   
+  console.log("ooo"+slides)
   // slideIndex[type] = n;
   if (n > slides.length-1) {slideIndex[type] = 0}    
   if (n < 0) {slideIndex[type] = slides.length-3}

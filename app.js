@@ -1,16 +1,16 @@
-var express = require("express"), 
-ejs         = require("ejs"),
-bodyP       = require("body-parser"),  
-mongoose    = require("mongoose"), 
+var express    = require("express"), 
+ejs            = require("ejs"),
+bodyP          = require("body-parser"),  
+mongoose       = require("mongoose"), 
 passport       = require("passport"),
 LocalStrategy  = require("passport-local"),
 session        = require("express-session"),
 User           = require("./models/user"),
 reveiw         = require("./models/reveiw"),
 methodOverride = require("method-Override"),
-seed        = require("./models/seeds"),
-prodact     = require("./models/prodact");    
-app         = express();
+seed           = require("./models/seeds"),
+prodact        = require("./models/prodact");    
+app            = express();
 mongoose.connect("mongodb://localhost/snowbord" , {useNewUrlParser: true});
 app.use(bodyP.urlencoded({extended: true}));
 
